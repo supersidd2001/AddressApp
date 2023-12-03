@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<File name="DebugFile"
+			fileName="C:/Users/Siddharth Shinde/Desktop/AddressViewer/AddressApp/logs/debug.log"
+			append="true">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</File>
+		<File name="InfoFile"
+			fileName="C:/Users/Siddharth Shinde/Desktop/AddressViewer/AddressApp/logs/info.log"
+			append="true">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</File>
+		<File name="WarnFile"
+			fileName="C:/Users/Siddharth Shinde/Desktop/AddressViewer/AddressApp/logs/warn.log"
+			append="true">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</File>
+		<File name="ErrorFile"
+			fileName="C:/Users/Siddharth Shinde/Desktop/AddressViewer/AddressApp/logs/error.log"
+			append="true">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</File>
+		<File name="FatalFile"
+			fileName="C:/Users/Siddharth Shinde/Desktop/AddressViewer/AddressApp/logs/fatal.log"
+			append="true">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.serversetup.LoginSessionListener"
+			level="debug" additivity="false">
+			<AppenderRef ref="DebugFile" />
+		</Logger>
+		<Logger name="com.serversetup.LoginSessionListener"
+			level="info" additivity="false">
+			<AppenderRef ref="InfoFile" />
+		</Logger>
+		<Logger name="com.serversetup.LoginSessionListener"
+			level="warn" additivity="false">
+			<AppenderRef ref="WarnFile" />
+		</Logger>
+		<Logger name="com.serversetup.LoginSessionListener"
+			level="error" additivity="false">
+			<AppenderRef ref="ErrorFile" />
+		</Logger>
+		<Logger name="com.serversetup.LoginSessionListener"
+			level="fatal" additivity="false">
+			<AppenderRef ref="FatalFile" />
+		</Logger>
+		<Root level="error">
+			<AppenderRef ref="ErrorFile" />
+		</Root>
+	</Loggers>
+</Configuration>
